@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+</head>
+
+<body>
+
+    <div style="color:Black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Car Price Analysis</h1>
+            
+
+        
+    <table class="center">
+  <tr>
+    <th></th>
+    <th></th> 
+  </tr>
+  <tr>
+    <td><h3>Car Registration Year</h3></td>
+    <td><input id="first" name="Year" type="number "></td>
+  </tr>
+  <tr>
+    <td><h3>Car Price(In lakhs)</h3></td>
+    <td><input id="second" name="Present_Price" required="required"></td>
+  </tr>
+  <tr>
+    <td><h3>Kilometers Run</h3></td>
+    <td><input id="third" name="Kms_Driven" required="required"></td>
+  </tr>
+  <tr>
+    <td><h3>Number of oweners(0 or 1 or 2)?</h3></td>
+    <td> <input id="fourth" name="Owner" required="required"></td>
+  </tr>
+  <tr>
+    <td><h3>Select Fuel Type</h3></td>
+    <td><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+            </select>
+    </td>
+  </tr>
+  <tr>
+    <td><h3>Dealer or Owner</h3></td>
+    <td><select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select></td>
+  </tr>
+  <tr>
+    <td><h3>Transmission Type</h3></td>
+    <td><select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+    </td>
+  </tr>
+  
+  </table>
+  <br><br><button id="sub" class="button" type="submit ">Calculate the Selling Price</button>
+        </form>
+
+<br><br><h3>{{ prediction_text }}<h3>
+</div>
+    
+
+<style>
+        body {
+            background-color:#00ffbf;
+            text-align: center;
+            padding: 0px;
+        }
+        table.center {
+             margin-left: auto; 
+             margin-right: auto;
+}
+h1 {
+  font-size: 50px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>        
+
+
+
+    
+</body>
+
+</html>
